@@ -1,0 +1,1277 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;900&family=Poppins:wght@300&family=Ubuntu&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:400,400i,600,600i,700,700i,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i">
+    <!-- carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" >
+    <link rel="stylesheet" type="text/css" href="carousel.css" rel="stylesheet" type="text/css" >
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/particle.css">
+
+</head>
+<body>
+
+    <section class="navigetion" id="navigetion">
+      <img src="./images/logo.png" class="logo">
+      <nav>
+        <ul id="menuList">
+          <li><a href="#">Home</a></li>
+          <!--
+          <li><a href="#about-section">About Us</a></li>
+          <li><a href="">Services</a></li>
+          -->
+          
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <i class="fat-sharp fa-solid fa-bars" onclick="togglemenu()"></i>
+    </section>
+    <script>
+      var menuList = document.getElementById("menuList");
+      menuList.style.maxHeight = "0px";
+      function togglemenu(){
+        if(menuList.style.maxHeight == "0px")
+        {
+          menuList.style.maxHeight = "130px";
+        }
+        else
+        {
+          menuList.style.maxHeight = "0px";
+        }
+      }
+
+
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("navigetion");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+    </script>
+    <style>
+      .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: black;
+  z-index: 260;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <header>
+    <div class="col-1">
+      <h2>Hosketing</h2>
+      <h3>We Provide <br><em><span class="typed-text"></span><span class="cursor">&nbsp;</span></em></h3>
+      <p>Expertise. Commitment. Value.</p>
+    </div>
+    <div class="col-2">
+      <img src="./images/logo.png" class="banner-img">
+      <div class="color-box"></div>
+    </div>
+    </header>
+
+
+
+    <script>
+      const typedTextSpan = document.querySelector(".typed-text");
+    const cursorSpan = document.querySelector(".cursor");
+    
+    const textArray = ["Website Designing", "Content Writing", "Graphic Designing", "Branding", "SMM", "SEO"];
+    const typingDelay = 100;
+    const erasingDelay = 50;
+    const newTextDelay = 1000; // Delay between current and next text
+    let textArrayIndex = 0;
+    let charIndex = 0;
+    
+    function type() {
+      if (charIndex < textArray[textArrayIndex].length) {
+        if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, typingDelay);
+      } 
+      else {
+        cursorSpan.classList.remove("typing");
+        setTimeout(erase, newTextDelay);
+      }
+    }
+    
+    function erase() {
+      if (charIndex > 0) {
+        if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+        charIndex--;
+        setTimeout(erase, erasingDelay);
+      } 
+      else {
+        cursorSpan.classList.remove("typing");
+        textArrayIndex++;
+        if(textArrayIndex>=textArray.length) textArrayIndex=0;
+        setTimeout(type, typingDelay + 1100);
+      }
+    }
+    
+    document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+      if(textArray.length) setTimeout(type, newTextDelay + 250);
+    });
+    </script>
+
+
+    <!--Particle-->
+    <div class='wrap' style="display: none;">
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+      <div class='c'></div>
+    </div>
+
+
+
+    
+
+
+
+
+
+    <div class="social-link">
+      <a href="https://www.facebook.com/profile.php?id=100086286730658"><img src="./images/fb.png" alt=""></a>
+      <a href="https://youtube.com/channel/UCYqAoEx6xwLOvOp9yC4UMtw"><img src="./images/yt.png" alt=""></a>
+      <a href="https://instagram.com/hosketing?igshid=YmMyMTA2M2Y="><img src="./images/ig.png" alt=""></a>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+  
+
+    
+
+
+
+
+
+
+    <!--About-->
+    <div class="about-section">
+        <div class="inner-container">
+          <span>GET INFO</span>
+            <h1 style="color: black;">About Us</h1>
+            <p class="text">
+              Creating interfaces and experiences If you're looking for a professional designer or a low-cost SEO consultant, your search has come to an end. We are professional designers with expertise in Website Design, Graphic Design, Motion Graphics, Content Writing, SEO, Branding, and Social Media Marketing.
+            </p>
+            <div class="skills">
+                <span>Web Design</span>
+                <span>Graphic Design</span>
+                <span>Content writing</span>
+                <span>Branding, SMM, & SEO</span>
+            </div>
+        </div>
+    </div>
+
+<!--Sponser-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript" ></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="./js/slick.js" type="text/javascript" charset="utf-8"></script>
+
+<div class="row">
+<div class="container1">
+  <section class="customer-logos slider">
+    <div class="slide"><img src="images/image1.png"></div>
+    <div class="slide"><img src="images/image2.png"></div>
+    <div class="slide"><img src="images/image3.png"></div>
+    <div class="slide"><img src="images/image4.png"></div>
+    <div class="slide"><img src="images/image5.png"></div>
+    <div class="slide"><img src="images/image6.png"></div>
+    <div class="slide"><img src="images/image7.png"></div>
+    <div class="slide"><img src="images/image8.png"></div>
+  </section>
+</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.customer-logos').slick({
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    arrows: false,
+    dots: false,
+      pauseOnHover: false,
+      responsive: [{
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 4
+      }
+    }, {
+      breakpoint: 520,
+      settings: {
+        slidesToShow: 3
+      }
+    }]
+  });
+});
+</script>
+    
+
+
+<!--Services-->
+<div class="container">
+    <span>WHAT WE DO?</span>
+    <h1>“ We help companies to introduce
+      and strengthen themselves ”</h1>
+    <div class="row1">
+        <div class="service">
+            <i class="fa-sharp fa-solid fa-shield-halved"></i>
+            <h3>1</h3>
+            <h2>Secure Payments</h2>
+            <p>Providing secured bar codes to scan. Accuracy with bills and receipts.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="service">
+          <i class="fa-sharp fa-solid fa-envelope"></i>
+            <h3>2</h3>
+            <h2>Daily Updates</h2>
+            <p>Our team will update you with e-mails or text messages about any updates related to new designs and offers.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="service">
+          <i class="fas fa-chart-line"></i>
+            <h3>3</h3>
+            <h2>Market Research</h2>
+            <p>Based on daily updates about market changes considering the trends and fashions, our team manages the research work according to the styles and designs.</p>
+            <a href="#">Read More</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="display: block; text-align:center">Past Statistics</span>
+<section class="happy">
+  <section class="happycustomers">
+    <div class="skills1">
+        <div class="outer">
+            <div class="inner">
+              <i class="fas fa-user"></i>
+                <div id="number"></div>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+            <defs>
+               <linearGradient id="GradientColor">
+                  <stop offset="0%" stop-color="#040c7b" />
+                  <stop offset="100%" stop-color="#303ef7" />
+               </linearGradient>
+            </defs>
+            <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+        </svg>
+        <h2>Clents</h2>
+    </div>
+    
+    <div class="skills1">
+        <div class="outer">
+            <div class="inner">
+              <i class="fas fa-face-smile"></i>
+                <div id="number1"></div>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+            <defs>
+               <linearGradient id="GradientColor">
+                  <stop offset="0%" stop-color="#040c7b" />
+                  <stop offset="100%" stop-color="#303ef7" />
+               </linearGradient>
+            </defs>
+            <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+        </svg>
+        <h2>Satisfied Customers</h2>
+    </div>
+
+    <div class="skills1">
+        <div class="outer">
+            <div class="inner">
+              <i class="fas fa-clock"></i>
+                <div id="number2"></div>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+            <defs>
+               <linearGradient id="GradientColor">
+                  <stop offset="0%" stop-color="#303ef7" />
+                  <stop offset="100%" stop-color="#040c7b" />
+               </linearGradient>
+            </defs>
+            <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+        </svg>
+        <h2>Working hours</h2>
+    </div>
+
+    <div class="skills1">
+        <div class="outer">
+            <div class="inner">
+              <i class="fas fa-folder-open"></i>
+                <div id="number3"></div>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+            <defs>
+               <linearGradient id="GradientColor">
+                  <stop offset="0%" stop-color="#303ef7" />
+                  <stop offset="100%" stop-color="#040c7b" />
+               </linearGradient>
+            </defs>
+            <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+        </svg>
+        <h2>Completed Projects</h2>
+    </div>
+</section>
+
+</section>
+
+
+<script>
+let number = document.getElementById("number");
+let counter = 0;
+setInterval(() => {
+    if (counter == 100){
+        clearInterval();
+    }
+    else{
+        counter += 1;
+    number.innerHTML = counter + "+";
+    }
+    
+},2);
+
+let number1 = document.getElementById("number1");
+let counter1 = 0;
+setInterval(() => {
+    if (counter1 == 99){
+        clearInterval();
+    }
+    else{
+        counter1 += 1;
+    number1.innerHTML = counter1 + "%";
+    }
+    
+},2);
+
+let number2 = document.getElementById("number2");
+let counter2 = 0;
+setInterval(() => {
+    if (counter2 == 1000){
+        clearInterval();
+    }
+    else{
+        counter2 += 1;
+    number2.innerHTML = counter2 + '+';
+    }
+    
+},2);
+
+let number3 = document.getElementById("number3");
+let counter3 = 0;
+setInterval(() => {
+    if (counter3 == 400){
+        clearInterval();
+    }
+    else{
+        counter3 += 1;
+    number3.innerHTML = counter3 + "+";
+    }
+    
+},2);
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="container2">
+  <span style="display: block; text-align:center">Our Services</span>
+  <h1>“ We have a variety of services
+    to help you ”</h1>
+  <div class="services">
+    <div class="product-pick">
+      <img src="./images/4.jpg" class="user-pic" onclick="showReview()">
+      <img src="./images/1.jpg" class="user-pic" onclick="showReview()">
+      <img src="./images/2.jpg" class="user-pic active-pic" onclick="showReview()">
+      <img src="./images/8.jpg" class="user-pic" onclick="showReview()">
+      <img src="./images/11.jpg" class="user-pic" onclick="showReview()">
+      <img src="./images/3.jpg" class="user-pic" onclick="showReview()">
+    </div>
+    <div class="service-text">
+      <div class="product-text">
+
+
+        <div class="card1">
+          <div class="card-thumb">
+            <img src="./images/service-website.png" alt="">
+            <span class="client-name">
+              Web Devlopment
+            </span>
+          </div>
+          <div class="card-body">
+            <p class="review">
+              In this digital age, it is nearly impossible to succeed in business without a good website. I offer creative web design services at reasonable rates to all businesses and start-ups. My mission is to provide high-quality websites that are tailored to their needs while keeping current market trends in mind. We offer affordable and high-quality professional web design services to small and medium-sized businesses.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="product-text">
+        <div class="card1">
+          <div class="card-thumb">
+            <img src="./images/service-graphic.png" alt="">
+            <span class="client-name">
+              Graphics Designing
+            </span>
+          </div>
+          <div class="card-body">
+            <p class="review">
+              Designs are used as a medium for communication, and they create a universal appeal when attempting to target a larger audience. Every business organisation seeks professional graphic designs for its targeted products or services in order to differentiate itself from competitors. A great strategic design can propel your brand to new heights, and with my expertise in creative design solutions, I am confident in making your brand a voice for your vision.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="product-text active-text" >
+        <div class="card1">
+          <div class="card-thumb">
+            <img src="./images/service-content.png" alt="">
+            <span class="client-name">
+              Content writing
+            </span>
+          </div>
+          <div class="card-body">
+            <p class="review">
+              Content writing is the process of creating content for online marketing purposes. Businesses can use content to attract leads and foster positive connections with their audience, ultimately pushing them down the sales funnel. Content is used by 87% of marketers to guide prospects through the various stages of the buyer journey. From brand awareness to purchase decisions, they use different content formats at each stage of the journey.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="product-text">
+        <div class="card1">
+          <div class="card-thumb">
+            <img src="./images/service-branding.png" alt="">
+            <span class="client-name">
+              Branding
+            </span>
+          </div>
+          <div class="card-body">
+            <p class="review">
+              Just think of me as your perfect partners for increase your digital branding solutions. Being the best digital marketing consultant, I have empowered various businesses all around the world to achieve their marketing goals. The digital marketing solutions employed by me are resonating with the latest trends present in the online marketing space. Frankly, I undertake all the necessary tasks that help business to create a strong and great online presence.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="product-text">
+        <div class="card1">
+          <div class="card-thumb">
+            <img src="./images/service-seo.png" alt="">
+            <span class="client-name">
+              SEO
+            </span>
+          </div>
+          <div class="card-body">
+            <p class="review">
+              We offer SEO, SMM, PPC, and other services to provide proven results for your business. Using customised solutions to rank your website higher on the page, establish your brand, reach more customers by targeting your audience, and most importantly, generate authentic leads at cost-effective rates is all guaranteed to work. It is also done using the most recent SEO techniques that are algorithm-based.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="product-text">
+        <div class="card1">
+          <div class="card-thumb">
+            <img src="./images/service-smm.png" alt="">
+            <span class="client-name">
+              SMM
+            </span>
+          </div>
+          <div class="card-body">
+            <p class="review">
+              We offer SEO, SMM, PPC, and other services to provide proven results for your business. Using customised solutions to rank your website higher on the page, establish your brand, reach more customers by targeting your audience, and most importantly, generate authentic leads at cost-effective rates is all guaranteed to work. It is also done using the most recent SEO techniques that are algorithm-based.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+<script>
+  let userTexts = document.getElementsByClassName("product-text");
+  let userPics = document.getElementsByClassName("user-pic");
+
+  function showReview(){
+    for(userPic of userPics){
+      userPic.classList.remove("active-pic");
+    }
+    for(userText of userTexts){
+      userText.classList.remove("active-text")
+    }
+    let i = Array.from(userPics).indexOf(event.target);
+
+    userPics[i].classList.add("active-pic");
+    userTexts[i].classList.add("active-text");
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="display: block; text-align:center"><span style="display: block; text-align:center">Pricing Plan</span></span>
+<h1 style="display: block; text-align:center">“ Offer a variety of plans to lower your cost ”</h1>
+<h1 style="display: block; text-align:center">Our Starting Price</h1>
+<div class="wrapper">
+  <div class="pricing-table gprice-single">
+      <div class="head">
+           <h4 class="title">Website</h4> 
+      </div>
+      <div class="content">
+          <div class="price">
+              <h1>₹6,000</h1>
+          </div>
+          <ul>
+              <li>Home Page</li>
+              <li>2 Static Page (About, Services,etc)</li>
+              <li>Product and Description</li>
+              <li>Contact Us Page (Email form submission)</li>
+              <li> <del>Location Maping</del> </li>
+              <li> <del>Live Chat from website</del></li>
+
+          </ul>
+          <div class="sign-up">
+              <a href="contact.html" class="btn bordered radius">Contact Now</a>
+          </div>
+      </div>
+  </div>
+      <div class="pricing-table gprice-single">
+          <div class="head">
+              <h4 class="title">Graphics</h4>
+          </div>
+          <div class="content">
+              <div class="price">
+                  <h1>₹500/Post</h1>
+              </div>
+              <ul>
+                  <li>SM Posst - ₹350/post</li>
+                  <li>Logo Design - ₹2000</li>
+                  <li>Businesses Card - ₹350</li>
+                  <li>Banner - ₹500</li>
+                  <li>Menu Card - ₹2000</li>
+                 <li>Product Packaging - ₹1000-5000</li>
+      
+              </ul>
+              <div class="sign-up">
+                  <a href="contact.html" class="btn bordered radius">Contact Now</a>
+              </div>
+          </div>
+      </div>
+          <div class="pricing-table gprice-single">
+              <div class="head">
+                  <h4 class="title">Branding, SEO & SMM</h4>
+              </div>
+              <div class="content">
+                  <div class="price">
+                      <h1>₹6,000</h1>
+                  </div>
+                  <ul>
+                      <li>Social Network Management</li>
+                      <li>Profile Management</li>
+                      <li>Targeting Audience</li>
+                      <li>Business Directory</li>
+                      <li>Customer Support</li>
+                      <li>Post per month - 10</li>
+                  </ul>
+                  <div class="sign-up">
+                      <a href="contact.html" class="btn bordered radius">Contact Now</a>
+                  </div>
+              </div>
+          </div>
+</div>
+
+
+
+
+
+
+<!--<div class="container3" style="display: none;">
+  <div class="wrapper">
+    <div class="card">
+      <div class="card-thumb">
+        <img src="./images/picck.png" alt="">
+        <span class="client-name">
+          Web Devlopment
+        </span>
+      </div>
+      <div class="card-body">
+        <p class="review">
+          woi wc wiocj wcoj cow b v pqo  fur eiuwdh poewi ioot tutu iowu qwiouo uetwui
+           uiieurhieuhwuir oerhquieh eorhuwehrweuhruehw ioqweuu woie wiro opipr;w porip pwr
+            wuiroq wiueqw; poru
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-thumb">
+        <img src="./images/picck.png" alt="">
+        <span class="client-name">
+          Web Devlopment
+        </span>
+      </div>
+      <div class="card-body">
+        <p class="review">
+          woi wc wiocj wcoj cow b v pqo  fur eiuwdh poewi ioot tutu iowu qwiouo uetwui
+           uiieurhieuhwuir oerhquieh eorhuwehrweuhruehw ioqweuu woie wiro opipr;w porip pwr
+            wuiroq wiueqw; poru
+        </p>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+
+     <section class="testimonial_section">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-lg-7">
+                         <div class="about_content">
+                              <div class="background_layer"></div>
+                              <div class="layer_content">
+                                  <div class="section_title">
+                                      <h5>CLIENTS</h5>
+                                      <h2>Happy with<strong>Customers & Clients</strong></h2>
+                                      <div class="heading_line"><span></span></div>
+                                      <p>Our Internet marketing services are grounded in actionable results for our clients as we help their businesses grow.</p>
+                                  </div>
+                                  <a href="#">Contact Us<i class="icofont-long-arrow-right"></i></a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-5">
+                          <div class="testimonial_box">
+                              <div class="testimonial_container">
+                                  <div class="background_layer"></div>
+                                  <div class="layer_content">
+                                      <div class="testimonial_owlCarousel owl-carousel">
+                                          <div class="testimonials"> 
+                                              <div class="testimonial_content">
+                                                  <div class="testimonial_caption">
+                                                      <h6>Rohit Sinhg</h6>
+                                                      <span>Car Transport</span>
+                                                  </div>
+                                                  <p>The team is second to none. They are professional and work with every detail. They are doing high-quality work.</p>
+                                              </div>
+                                              <div class="images_box">
+                                                  <div class="testimonial_img">
+                                                      <img class="img-center" src="images/test-2.png" alt="images not found" style="width: 200px;">
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="testimonials"> 
+                                              <div class="testimonial_content">
+                                                  <div class="testimonial_caption">
+                                                      <h6>Jason</h6>
+                                                      <span>Restaurant owner</span>
+                                                  </div>
+                                                  <p>5 stars for Hosketing. Their team is organized, efficient, and pays great attention to detail.</p>
+                                              </div>
+                                              <div class="images_box">
+                                                  <div class="testimonial_img">
+                                                      <img class="img-center" src="images/test-1.png" alt="images not found" style="width: 200px;">
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="testimonials"> 
+                                              <div class="testimonial_content">
+                                                  <div class="testimonial_caption">
+                                                      <h6>Aayushi</h6>
+                                                      <span>Antique Collector</span>
+                                                  </div>
+                                                  <p>This is an outstanding essay. The service was superb, and the amenities outmatched by the competition.</p>
+                                              </div>
+                                              <div class="images_box">
+                                                  <div class="testimonial_img">
+                                                      <img class="img-center" src="images/test-3.png" alt="images not found" style="width: 200px; z-index: 12;">
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+  
+  
+<script>$('.testimonial_owlCarousel').owlCarousel({
+      loop:true,
+      margin:10,
+      dots:false,
+      nav:true,
+      autoplay:false,   
+      smartSpeed: 3000, 
+      autoplayTimeout:4000,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:1
+          },
+          1000:{
+              items:1
+          }
+      }
+  })</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="news">
+  <div class="news-heading">
+    <span>Recent News</span>
+    <h1>News</h1>
+  </div>
+
+  <div class="news-container">
+
+    <div class="news-box">
+      <div class="news-img">
+        <img src="images/news-1.jpg" alt="news">
+      </div>
+      <div class="news-text">
+        <span>Oct 18, 2022, 09:36 IST</span>
+        <a href="#" class="news-title">ISB Digital Marketing & Analytics Programme: Helping digital marketers take the next step in their career journey</a>
+        <p>Your consumer is online. The pandemic has fast-forwarded a decade’s worth of digital adoption in a year, forcing consumers and businesses to adopt new digital behaviour. This has made all categories rethink their approach towards traditional & digital marketing channels to create a consolidated approach moving forward.
+        </p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+
+    <div class="news-box">
+      <div class="news-img">
+        <img src="images/news-2.jpg" alt="news">
+      </div>
+      <div class="news-text">
+        <span>Sep 28, 2022, 12:38 (IST)</span>
+        <a href="#" class="news-title">digital marketing: A Growing Career Prospect</a>
+        <p>Connecting with the right people in the right place and at the right time serves as an important component for the growth of any business. Given this, Digital Marketing has a significant role to play. Having grown tremendously over the past few years, Digital Marketing has not only helped businesses focus on their target audiences using the Internet and Online based digital technologies but has also brought high revenue with little investment. With such benefits to offer along with easy control and easy-to-monitor ability, it is quickly becoming one of the most sought-after Careers.</p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+
+    <div class="news-box">
+      <div class="news-img">
+        <img src="images/news-3.jpg" alt="news">
+      </div>
+      <div class="news-text">
+        <span>Oct 19, 2022, 16:29 (IST)</span>
+        <a href="#" class="news-title">WGoogle collaborates with the Assam govt to digitise schools and provide skills to the students</a>
+        <p>In a recent move, Google inked a deal with the Assam government and signed an MoU to expedite the Assam government’s endeavour of promoting digital growth and development in the state. To enable this, Google will work with the Assam government’s Skill, Employment and Entrepreneurship Department (SEED) for improving their school digitization efforts with the help of online learning tools and solutions to help in teaching and learning.</p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+<footer>
+  <div class="rows">
+    <div class="col" style="margin-top: -20px;">
+      <img src="logo.png" class="footer-logo">
+      <h2 style="font-family: 'Orbitron', sans-serif;">Hosketing</h2>
+      <p>Creating interfaces and experiences If you're looking for a professional designer or a low-cost SEO consultant, your search has come to an end. We are professional designers with expertise in Website Design, Graphic Design, Motion Graphics, Content Writing, SEO, Branding, and Social Media Marketing.
+      </p>
+    </div>
+    <div class="col">
+      <h3>Get in Touch <div class="underline"><span></span></div></h3>
+      <p>Patna</p>
+      <p>Bihar</p>
+      <br>
+      <a href = "mailto: hosketing@gmail.com"><h4>hosketing@gmail.com</h4></a>
+      <a href="tel:8789553414"><h4>87895 53414</h4></a>
+    </div>
+    <div class="col">
+      <h3>Learn More <div class="underline"><span></span></div></h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="">Terms & Conditions</a></li>
+        <li><a href="">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>Our Newsletter<div class="underline"><span></span></div></h3>
+      <p>Subscribe to our newsletter to get our news & deals delivered to you.</p>
+      <br>
+      <form>
+        <i class="fas fa-envelope"></i>
+        <input type="email" placeholder="Enter your email id" required>
+        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+      </form>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=100086286730658"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://instagram.com/hosketing?igshid=YmMyMTA2M2Y="><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://wa.me/8789553414/?text=Hi I am Intrested"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://youtube.com/channel/UCYqAoEx6xwLOvOp9yC4UMtw"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <p class="copyright">Hosketing &copy; 2022 - All Rights Reserved</p>
+</footer>
+
+
+
+
+
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
