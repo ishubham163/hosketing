@@ -44,6 +44,9 @@ body{
     cursor: pointer;
     margin: 20px 0;
 }
+.navigetion .fas{
+display: none;
+}
 .fat-sharp{
     font-size: 30px;
     width: 25px;
@@ -98,6 +101,9 @@ nav ul li a:hover{
         overflow: hidden;
         transition: 0.5s;
     }
+    .navigetion .fas{
+        display: block;
+        }
 }
 
 
